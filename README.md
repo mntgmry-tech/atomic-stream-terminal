@@ -30,12 +30,12 @@ npm install
 Create `.env` in `atomic-stream-terminal/`:
 
 ```env
-PUBLIC_HTTP_BASE_URL=http://localhost:8788
+PUBLIC_HTTP_BASE_URL=https://x402.atomicstream.net
 # Prefer SVM_PRIVATE_KEY_FILE or the default Solana keypair path. Use SVM_PRIVATE_KEY if you already have base58.
 SVM_PRIVATE_KEY=
 SVM_PRIVATE_KEY_FILE=~/.config/solana/id.json
 RENEW_METHOD=http
-POOL_LOOKUP_HTTP_BASE_URL=http://localhost:8788
+POOL_LOOKUP_HTTP_BASE_URL=https://x402.atomicstream.net
 WATCH_MINTS=So11111111111111111111111111111111111111112,EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
 WATCH_RESERVE_POOLS=
 WATCH_SWAP_POOLS=
