@@ -1,6 +1,8 @@
 # Atomic Stream Terminal
 
-Terminal UI dashboard for live Solana trading streams. This app connects to ws402 (x402) WebSocket streams exposed by `yellowstone-grpc-ws-bridge` and renders real-time market activity using `blessed` and `blessed-contrib`.
+![Atomic Stream Terminal](./atomic-terminal.gif)
+
+Terminal UI dashboard for live Solana trading streams. This app connects to ws402 (x402) WebSocket streams made available by [atomicstream.net](https://atomicstream.net) and renders real-time market activity using `blessed` and `blessed-contrib`.
 
 ## Features
 
@@ -16,7 +18,6 @@ Terminal UI dashboard for live Solana trading streams. This app connects to ws40
 ## Requirements
 
 - Node.js 20+
-- A running ws402 server that exposes the Yellowstone stream schemas used below (typically `yellowstone-grpc-ws-bridge`)
 - A Solana keypair for x402 payments (base58 secret key or a keypair JSON file)
 
 ## Install
@@ -189,9 +190,6 @@ These updates are in-memory and apply to the current session only.
 - `pool-reserves` only emits for watched pool addresses.
 - Add pools with `o` or set `WATCH_RESERVE_POOLS`. Use pool IDs (not vaults), or mint pairs if `POOL_LOOKUP_HTTP_BASE_URL` is configured.
 - The safest source is the Pool Creations table or `GET /pools/lookup` on the bridge health server.
-
-**Swap alerts are empty**
-- `swap-alerts` is server-filtered for large swaps. If you use `yellowstone-grpc-ws-bridge`, check `X402_WHALE_ALERT_USD_THRESHOLD` in `yellowstone-grpc-ws-bridge/.env.server`.
 
 **Jupiter label missing in swap quotes**
 - Ensure `JUPITER_PROGRAM_IDS` is set on the bridge so swaps routed via Jupiter can be detected.
